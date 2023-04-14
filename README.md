@@ -64,16 +64,19 @@ processo seletivo.
 
 ### No terminal:
 
+Para não precisar usar o sudo nos comandos docker, execute:
+`sudo usermod -aG docker $USER`
+
 Verifique o status do docker, execute:
 
 `service docker status`
 Caso a saida do terminal seja `* Docker is not running` execute?:
 
-`sudo service docker start`
+` service docker start`
 
 Dentro deste respositorio, na pasta /docker onde comtém o arquivo `docker-compose.yml` com as configurações da imagem do mysql execute:
 
-`sudo docker-compose up -d`
+`docker-compose up -d --build`
 
 - Se tudo ocorreu bem você vera está mensagem:
 
