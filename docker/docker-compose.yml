@@ -14,7 +14,7 @@ services:
     ports:
       - "2023:3306"
     volumes:
-      - db_data:/home/guilherme/dev/enterprise_management_MySQL/mysql/data
+      - /home/guilherme/dev/enterprise_management_MySQL/mysql/data:/var/lib/mysql
 
 volumes:
   db_data:
