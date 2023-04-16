@@ -48,7 +48,7 @@ Requisitos.
 - WSL2 Ubuntu-20.04
 - Docker Engine Version: 23.0.3
 - Docker-Compose version 1.25.0
-- mysql
+- MySQL 8.0.32
 
 ---
 
@@ -57,7 +57,6 @@ Requisitos.
 ---
 
 <details><summary>Modelagem do esquema do banco de dados</summary>
-
 
 - A modelagem foi realizada utilizando a plataforma <a href=" https://app.diagrams.net/"> https://app.diagrams.net/ </a>. Para visualizar o modelo, você pode utilizar a extensão Drawio Preview no VS Code ou importar o arquivo "database_schema_modeling.drawio" presente na pasta "/docs" deste repositório.
 
@@ -88,5 +87,27 @@ Dentro deste respositorio, na pasta /docker onde comtém o arquivo `docker-compo
 - - `Starting some-mysql ... done`
 
 ---
+
+</details>
+
+<details><summary>Procedures que realizem o CRUD a partir de uma estrutura JSON</summary>
+
+- Conecte-se ao banco de dados Empresa e execute as instruções SQL
+- habilitar o suporte a JSON no MySQL. Isso pode ser feito executando o seguinte comando:
+- - `SET @@global.validate_json_unicode = 0;`
+
+Criando o CRUD (Create, Read, Update e Delete)
+
+<details><summary>C</summary>
+  </details>
+
+  <details><summary>R</summary>
+  </details>
+
+  <details><summary>U</summary>
+  </details>
+
+  <details><summary>D</summary>
+  </details>
 
 </details>
