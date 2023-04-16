@@ -61,7 +61,9 @@ Requisitos.
 - Imagem do diagrama gerada pelo DBeaver:
 
 - - <details><summary><a>Expandir imagem <a></summary>
-      <img src="https://raw.githubusercontent.com/guilhermeforprojeto/enterprise_management_MySQL/main/docs/Diagrama_Empresa.png?token=GHSAT0AAAAAACBJLJZE2DQQPTQZ2WKBHRFKZB4ATCQ"></img>
+
+    ![Diagrama_Empresa.png](/docs/Diagrama_Empresa.png)
+
     </details>
     </details>
 
