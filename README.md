@@ -54,13 +54,16 @@ Requisitos.
 
 </details>
 
----
-
 <details><summary>Modelagem do esquema do banco de dados</summary>
 
 - A modelagem foi realizada utilizando a plataforma <a href=" https://app.diagrams.net/"> https://app.diagrams.net/ </a>. Para visualizar o modelo, você pode utilizar a extensão Drawio Preview no VS Code ou importar o arquivo "database_schema_modeling.drawio" presente na pasta "/docs" deste repositório.
 
-</details>
+- Imagem do diagrama gerada pelo DBeaver:
+
+- - <details><summary><a>Expandir imagem <a></summary>
+      <img src="https://raw.githubusercontent.com/guilhermeforprojeto/enterprise_management_MySQL/main/docs/Diagrama_Empresa.png?token=GHSAT0AAAAAACBJLJZE2DQQPTQZ2WKBHRFKZB4ATCQ"></img>
+    </details>
+    </details>
 
 <details><summary>Iniciar sistema de gerenciamento empresarial</summary>
 
