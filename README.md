@@ -44,11 +44,13 @@ Requisitos.
 
 - Windows11
 - WSL2 Ubuntu-20.04
+- - libmysqlclient-dev
 - Docker Engine Version: 23.0.3
 - Docker-Compose version 1.25.0
 - MySQL 8.0.32
 - Python 3.8.10
-- Django 4.0.6
+- - mysql_connector_python-8.0.32
+- - Django 4.0.6
 
 ---
 
