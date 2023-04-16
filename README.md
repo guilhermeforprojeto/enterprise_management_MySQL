@@ -37,9 +37,7 @@ Requisitos.
 - Os requisitos são requisitos funcionais e não funcionais da solução, mas a criatividade
   pode ser exercitada e é encorajada. A inclusão de outras funcionalidades é
   encorajada.
-- Google, StackOverflow são seus amigos. Contudo, essa é uma atividade individual.
-Qualquer evidência de plágio ou cópia de artefatos online será motivo de exclusão do
-processo seletivo.
+
 </details>
 
 ---
@@ -57,6 +55,13 @@ processo seletivo.
 </details>
 
 ---
+
+<details><summary>Modelagem do esquema do banco de dados</summary>
+
+
+- A modelagem foi realizada utilizando a plataforma <a href=" https://app.diagrams.net/"> https://app.diagrams.net/ </a>. Para visualizar o modelo, você pode utilizar a extensão Drawio Preview no VS Code ou importar o arquivo "database_schema_modeling.drawio" presente na pasta "/docs" deste repositório.
+
+</details>
 
 <details><summary>Iniciar sistema de gerenciamento empresarial</summary>
 
