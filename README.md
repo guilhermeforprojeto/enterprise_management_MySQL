@@ -49,7 +49,9 @@ Requisitos.
 - Docker-Compose version 1.25.0
 - MySQL 8.0.32
 - Python 3.8.10
+- - mysqlclient-2.1.1
 - - mysql_connector_python-8.0.32
+- - djangorestframework-3.14
 - - Django 4.0.6
 
 ---
