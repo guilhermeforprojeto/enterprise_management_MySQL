@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'empresa',
 ]
 
 MIDDLEWARE = [
@@ -75,8 +77,17 @@ WSGI_APPLICATION = 'GerenciamentoEmpresarial.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'Empresa',
+        'USER': 'guilhermepython',
+        'PASSWORD': 'a.123456',
+        'HOST': '127.0.0.1',
+        'PORT': '2023',
+        'OPTIONS': {
+            'charset': 'utf8mb4',
+            'autocommit': True,
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        },
     }
 }
 
