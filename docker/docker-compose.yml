@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  db:
+  db1:
     image: mysql
     container_name: base-mysql
     command: --default-authentication-plugin=mysql_native_password
@@ -16,5 +16,17 @@ services:
     volumes:
       - /home/guilherme/dev/enterprise_management_MySQL/mysql/data:/var/lib/mysql
 
-volumes:
-  db_data:
+  db2:
+    image: mysql
+    container_name: mysqlBydjanjo
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: a.123456
+      MYSQL_DATABASE: Empresa
+      MYSQL_USER: guilhermepython
+      MYSQL_PASSWORD: a.123456
+    ports:
+      - "2040:3306"
+    volumes:
+      - /home/guilherme/dev/enterprise_management_MySQL/mysql/data-django:/var/lib/mysql
