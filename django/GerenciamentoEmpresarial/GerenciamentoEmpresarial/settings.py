@@ -82,7 +82,7 @@ DATABASES = {
         'USER': 'guilhermepython',
         'PASSWORD': 'a.123456',
         'HOST': '127.0.0.1',
-        'PORT': '2023',
+        'PORT': '2040',
         'OPTIONS': {
             'charset': 'utf8mb4',
             'autocommit': True,
