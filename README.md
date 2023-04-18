@@ -328,7 +328,7 @@ Caso a saida do terminal seja `* Docker is not running` execute?:
 
 Dentro deste respositorio, na pasta /docker onde comtém o arquivo `docker-compose.yml` com as configurações da imagem do mysql execute:
 
-`docker-compose up -d ` para arquivo padrão docker-compose.yml
+`docker-compose up -d` para arquivo padrão docker-compose.yml
 
 `docker-compose -f docker-compose_mysql_by_djanjo.yml up -d` para arquivo docker-compose configurado para o banco mysql usando pelo django
 
