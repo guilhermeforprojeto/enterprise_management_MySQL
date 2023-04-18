@@ -51,6 +51,7 @@ Requisitos.
 - Python 3.8.10
 - - mysqlclient-2.1.1
 - - mysql_connector_python-8.0.32
+- - shortuuid
 - - djangorestframework-3.14
 - - Django 4.0.6
 
