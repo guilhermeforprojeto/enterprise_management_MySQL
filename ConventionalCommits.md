@@ -30,4 +30,5 @@ Exemplo: alterar ForEach por while, melhorar a query ao banco, etc.
 
 `ci`: utilizada para mudanças nos arquivos de configuração de CI.
 Exemplo: Circle, Travis, BrowserStack, etc.
-revert: indica a reverão de um commit anterior.
+
+`revert:` indica a reverão de um commit anterior.
