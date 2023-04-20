@@ -3,10 +3,11 @@
 ###########################################################
 
 
-CREATE TABLE Departamento (
+CREATE TABLE departamento (
   ID_Departamento INT(4) PRIMARY KEY,
-  Nome_Departamento VARCHAR(40)
+  Nome_Departamento VARCHAR(40) UNIQUE
 );
+
 
 CREATE TABLE Funcionario (
   ID_Funcionario INT(4) PRIMARY KEY,
