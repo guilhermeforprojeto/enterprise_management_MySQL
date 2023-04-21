@@ -2,15 +2,14 @@
 -- Criar uma tabela por vez devido das chaves estrangeiras 
 ###########################################################
 
-
 CREATE TABLE Departamento (
-  ID_Departamento INT(4) PRIMARY KEY,
-  Nome_Departamento VARCHAR(40) UNIQUE
-  
-);
+  ID_Departamento INT(4) AUTO_INCREMENT PRIMARY KEY,
+  Nome_Departamento VARCHAR(40),
+  Localizacao_Departamento VARCHAR(40)
+);;
 
 CREATE TABLE Funcionario (
-  ID_Funcionario INT(4) PRIMARY KEY,
+  ID_Funcionario INT(4) AUTO_INCREMENT PRIMARY KEY,
   Nome_Funcionario VARCHAR(40) UNIQUE,
   CPF_Funcionario VARCHAR(11) UNIQUE,
   RG_Funcionario VARCHAR(9) UNIQUE,
@@ -26,7 +25,7 @@ CREATE TABLE Funcionario (
 
 
 CREATE TABLE Projeto (
-  ID_Projeto INT(4) PRIMARY KEY,
+  ID_Projeto INT(4) AUTO_INCREMENT PRIMARY KEY,
   Nome_Projeto VARCHAR(40),
   Quantidade_Horas_Necessarias INT(4),
   Prazo_Estimado INT(4),
@@ -43,7 +42,7 @@ CREATE TABLE Projeto (
 
 
 CREATE TABLE Trabalho (
-ID_Trabalho INT(4) PRIMARY KEY,
+ID_Trabalho INT(4) AUTO_INCREMENT PRIMARY KEY,
 ID_Funcionario INT(4),
 ID_Projeto INT(4),
 FOREIGN KEY  (ID_Funcionario) REFERENCES Funcionario(ID_Funcionario),
@@ -56,7 +55,7 @@ UNIQUE KEY (ID_Funcionario, ID_Projeto)
 
 
 CREATE TABLE trabalho_funcionario_projeto (
-    ID_Trabalho_Funcionario_Projeto INT(4) PRIMARY KEY,
+    ID_Trabalho_Funcionario_Projeto INT(4) AUTO_INCREMENT PRIMARY KEY,
     ID_Funcionario INT(4),
     ID_Projeto INT(4),
     Quantidade_Horas_Trabalhadas INT(4),
@@ -67,7 +66,7 @@ CREATE TABLE trabalho_funcionario_projeto (
 
 
 CREATE TABLE Supervisao(
-ID_Supervisao INT(4) PRIMARY KEY,
+ID_Supervisao INT(4) AUTO_INCREMENT PRIMARY KEY,
 ID_Funcionario_Supervisor  INT(4),
 ID_Projeto  INT(4),
 FOREIGN KEY (ID_Funcionario_Supervisor) REFERENCES Funcionario(ID_Funcionario),
