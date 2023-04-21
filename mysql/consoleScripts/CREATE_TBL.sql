@@ -6,10 +6,11 @@
 CREATE TABLE Departamento (
   ID_Departamento INT(4) PRIMARY KEY,
   Nome_Departamento VARCHAR(40) UNIQUE
+  
 );
 
 CREATE TABLE Funcionario (
-  ID_Funcionario INT(4) PRIMARY KEY AUTO_INCREMENT,
+  ID_Funcionario INT(4) PRIMARY KEY,
   Nome_Funcionario VARCHAR(40) UNIQUE,
   CPF_Funcionario VARCHAR(11) UNIQUE,
   RG_Funcionario VARCHAR(9) UNIQUE,
@@ -36,6 +37,7 @@ CREATE TABLE Projeto (
   FOREIGN KEY (ID_Departamento) REFERENCES Departamento(ID_Departamento),
   FOREIGN KEY (ID_Funcionario_Supervisor) REFERENCES Funcionario(ID_Funcionario)
 );
+
 
 CREATE TABLE Trabalho (
 ID_Trabalho INT(4) PRIMARY KEY,
