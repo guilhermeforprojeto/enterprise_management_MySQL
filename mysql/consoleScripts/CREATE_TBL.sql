@@ -33,11 +33,13 @@ CREATE TABLE Projeto (
   Quantidade_Horas_Realizadas INT(4),
   Data_Ultimo_Calculo_Horas DATE,
   ID_Departamento INT(4),
+  Carga_Horaria_Supervisao INT(4),
   ID_Funcionario_Supervisor INT(4),
-  UNIQUE KEY indexNome_Departamento (ID_Departamento, Nome_Projeto),
+  FOREIGN KEY (ID_Funcionario_Supervisor) REFERENCES Funcionario(ID_Funcionario),
   FOREIGN KEY (ID_Departamento) REFERENCES Departamento(ID_Departamento),
   FOREIGN KEY (ID_Funcionario_Supervisor) REFERENCES Funcionario(ID_Funcionario)
 );
+
 
 
 CREATE TABLE Trabalho (
