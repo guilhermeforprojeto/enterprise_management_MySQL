@@ -40,7 +40,6 @@ CREATE TABLE Projeto (
 );
 
 
-
 CREATE TABLE Trabalho (
 ID_Trabalho INT(4) PRIMARY KEY,
 ID_Funcionario INT(4),
@@ -49,8 +48,20 @@ FOREIGN KEY  (ID_Funcionario) REFERENCES Funcionario(ID_Funcionario),
 FOREIGN KEY (ID_Projeto) REFERENCES  Projeto(ID_Projeto),
 Quantidade_Horas_Trabalhadas INT(4),
 Data_Inicio_Trabalho DATE,
-Data_Fim_Trabalho DATE
+Data_Fim_Trabalho DATE,
+UNIQUE KEY (ID_Funcionario, ID_Projeto)
 );
+
+
+CREATE TABLE trabalho_funcionario_projeto (
+    ID_Trabalho_Funcionario_Projeto INT(4) PRIMARY KEY,
+    ID_Funcionario INT(4),
+    ID_Projeto INT(4),
+    Quantidade_Horas_Trabalhadas INT(4),
+    FOREIGN KEY (ID_Funcionario) REFERENCES Funcionario(ID_Funcionario),
+    FOREIGN KEY (ID_Projeto) REFERENCES Projeto(ID_Projeto)
+);
+
 
 
 CREATE TABLE Supervisao(
