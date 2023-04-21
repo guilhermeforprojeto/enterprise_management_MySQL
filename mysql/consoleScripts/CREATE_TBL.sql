@@ -4,8 +4,7 @@
 
 CREATE TABLE Departamento (
   ID_Departamento INT(4) AUTO_INCREMENT PRIMARY KEY,
-  Nome_Departamento VARCHAR(40),
-  Localizacao_Departamento VARCHAR(40)
+  Nome_Departamento VARCHAR(40) UNIQUE,
 );;
 
 CREATE TABLE Funcionario (
