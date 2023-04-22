@@ -2,14 +2,15 @@
 -- Criar uma tabela por vez devido das chaves estrangeiras 
 ###########################################################
 
+
 CREATE TABLE Departamento (
   ID_Departamento INT(4) AUTO_INCREMENT PRIMARY KEY,
-  Nome_Departamento VARCHAR(40) UNIQUE,
-);;
+  Nome_Departamento VARCHAR(40) UNIQUE NOT NULL
+);
 
 CREATE TABLE Funcionario (
   ID_Funcionario INT(4) AUTO_INCREMENT PRIMARY KEY,
-  Nome_Funcionario VARCHAR(40) UNIQUE,
+  Nome_Funcionario VARCHAR(40) UNIQUE NOT NULL,
   CPF_Funcionario VARCHAR(11) UNIQUE,
   RG_Funcionario VARCHAR(9) UNIQUE,
   Sexo_Funcionario VARCHAR(9),
@@ -25,7 +26,7 @@ CREATE TABLE Funcionario (
 
 CREATE TABLE Projeto (
   ID_Projeto INT(4) AUTO_INCREMENT PRIMARY KEY,
-  Nome_Projeto VARCHAR(40),
+  Nome_Projeto VARCHAR(40) NOT NULL,
   Quantidade_Horas_Necessarias INT(4),
   Prazo_Estimado INT(4),
   Quantidade_Horas_Realizadas INT(4),
