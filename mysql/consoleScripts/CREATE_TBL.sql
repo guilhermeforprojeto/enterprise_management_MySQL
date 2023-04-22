@@ -27,6 +27,7 @@ CREATE TABLE Projeto (
 );
 
 
+
 -- teste insert projetos em departamentos diferentes k 
 INSERT INTO Projeto (Nome_Projeto, ID_Departamento) VALUES
 ('SISTEMA ERP', 1),
@@ -74,25 +75,19 @@ Quantidade_Horas_Trabalhadas INT(4),
 Data_Inicio_Trabalho DATE,
 Data_Fim_Trabalho DATE,
 UNIQUE KEY (ID_Funcionario, ID_Projeto)
+);;
+
+
+CREATE TABLE Supervisor (
+  ID_Supervisor INT(4) AUTO_INCREMENT PRIMARY KEY,
+  ID_Funcionario INT(4) NOT NULL,
+  ID_Projeto INT(4) NOT NULL,
+  Carga_Horaria_Supervisao INT(4) NOT NULL,
+  FOREIGN KEY (ID_Funcionario) REFERENCES Funcionario(ID_Funcionario),
+  FOREIGN KEY (ID_Projeto) REFERENCES Projeto(ID_Projeto), 
+  CONSTRAINT UC_Supervisor_Funcionario_Projeto UNIQUE(ID_Funcionario, ID_Projeto),
+  CONSTRAINT FK_Supervisor_Projeto FOREIGN KEY (ID_Projeto)
+    REFERENCES Projeto(ID_Projeto),
+    CONSTRAINT CHK_Carga_Horaria_Supervisao CHECK (Carga_Horaria_Supervisao > 0 OR Carga_Horaria_Supervisao IS NULL)
 );
 
-
-CREATE TABLE trabalho_funcionario_projeto (
-    ID_Trabalho_Funcionario_Projeto INT(4) AUTO_INCREMENT PRIMARY KEY,
-    ID_Funcionario INT(4),
-    ID_Projeto INT(4),
-    Quantidade_Horas_Trabalhadas INT(4),
-    FOREIGN KEY (ID_Funcionario) REFERENCES Funcionario(ID_Funcionario),
-    FOREIGN KEY (ID_Projeto) REFERENCES Projeto(ID_Projeto)
-);
-
-
-
-CREATE TABLE Supervisao(
-ID_Supervisao INT(4) AUTO_INCREMENT PRIMARY KEY,
-ID_Funcionario_Supervisor  INT(4),
-ID_Projeto  INT(4),
-FOREIGN KEY (ID_Funcionario_Supervisor) REFERENCES Funcionario(ID_Funcionario),
-FOREIGN KEY (ID_Projeto) REFERENCES  Projeto(ID_Projeto),
-Carga_Horaria_Semana_Supervisao  INT(4)
-);
