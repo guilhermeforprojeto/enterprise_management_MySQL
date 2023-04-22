@@ -63,6 +63,15 @@ CREATE TABLE Funcionario (
 
 
 
+CREATE TABLE Funcionario_Projeto (
+  ID_Funcionario INT(4),
+  ID_Projeto INT(4),
+  Carga_Horaria INT(4),
+  FOREIGN KEY (ID_Funcionario) REFERENCES Funcionario(ID_Funcionario),
+  FOREIGN KEY (ID_Projeto) REFERENCES Projeto(ID_Projeto),
+  CONSTRAINT PK_Funcionario_Projeto PRIMARY KEY (ID_Funcionario, ID_Projeto),
+  CONSTRAINT CHK_Carga_Horaria CHECK (Carga_Horaria > 0)
+);
 
 
 CREATE TABLE Trabalho (
