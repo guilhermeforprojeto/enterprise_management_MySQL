@@ -1,0 +1,25 @@
+
+-- teste - Regra de negócio 	A soma das cargas horárias em que o 
+-- funcionário supervisiona e trabalha em   projetos não pode ultrapassar a carga horária do funcionário
+
+-- aqui veremos um erro
+INSERT INTO Supervisor(ID_Funcionario, ID_Projeto, Carga_Horaria_Supervisao)
+VALUES (1, 2, 119);
+
+
+-- aqui o insert passa ja que esta menor que a Carga_Horaria de Funcionario_Projeto
+INSERT INTO Supervisor(ID_Funcionario, ID_Projeto, Carga_Horaria_Supervisao)
+VALUES (1, 2, 9);
+
+
+
+INSERT INTO Funcionario_Projeto (
+ID_Funcionario,
+ID_Projeto,
+Carga_Horaria) 
+VALUES (
+1, 
+2,
+10);
+
+-- fim teste
