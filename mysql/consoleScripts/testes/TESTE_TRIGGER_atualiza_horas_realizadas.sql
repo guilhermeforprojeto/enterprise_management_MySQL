@@ -1,5 +1,7 @@
+-- CRIAR A TRIGGER 
+
 CREATE TRIGGER atualiza_horas_realizadas
-BEFORE INSERT ON Funcionario_Projeto
+AFTER INSERT ON Funcionario_Projeto
 FOR EACH ROW
 BEGIN
   DECLARE semanas_passadas DECIMAL(10,2);
@@ -22,6 +24,8 @@ BEGIN
     WHERE ID_Projeto = NEW.ID_Projeto;
   END IF;
 END;
+
+
 
 -- INSERTS PARA TESTE DA TRIGGER
 
