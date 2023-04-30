@@ -1,4 +1,4 @@
-CREATE PROCEDURE departamento_crud(
+CREATE PROCEDURE 001proc_departamento_crud(
   IN json_str TEXT,
   IN op VARCHAR(10)
 )
@@ -17,9 +17,9 @@ END;
 
 SHOW CREATE PROCEDURE departamento_crud;
 
-CALL departamento_crud('{"Nome_Departamento": "PROCEDURE insert 1"}', 'insert');
-CALL departamento_crud('{"ID_Departamento": 1, "Nome_Departamento": "PROCEDURE departamento_crud"}', 'update');
-CALL departamento_crud('{"ID_Departamento": 1}', 'read');
-CALL departamento_crud('{"ID_Departamento": 1}', 'delete');
+CALL 001proc_departamento_crud('{"Nome_Departamento": "PROCEDURE insert 1"}', 'insert');
+CALL 001proc_departamento_crud('{"ID_Departamento": 1, "Nome_Departamento": "PROCEDURE departamento_crud"}', 'update');
+CALL 001proc_departamento_crud('{"ID_Departamento": 1}', 'read');
+CALL 001proc_departamento_crud('{"ID_Departamento": 1}', 'delete');
 
 SELECT * FROM Departamento

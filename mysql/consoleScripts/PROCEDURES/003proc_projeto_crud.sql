@@ -1,4 +1,4 @@
-CREATE PROCEDURE projeto_crud(
+CREATE PROCEDURE 003proc_projeto_crud(
   IN json_str TEXT,
   IN op VARCHAR(10)
 )
@@ -21,3 +21,13 @@ BEGIN
     SELECT * FROM Projeto WHERE ID_Projeto = JSON_EXTRACT(json_str, '$.ID_Projeto');
   END IF;
 END;
+
+
+
+CALL projeto_crud('{"Nome_Projeto": "Novo Projeto", "Data_Inicio": "2023-05-01", "Data_Fim": "2023-12-31", "Orcamento": 50000, "ID_Departamento": 1}', 'insert');
+
+CALL projeto_crud('{"ID_Projeto": 1, "Nome_Projeto": "Projeto Atualizado", "Data_Inicio": "2022-02-01", "Data_Fim": "2022-12-31", "Orcamento": 120000, "ID_Departamento": 2}', 'update');
+
+CALL projeto_crud('{"ID_Projeto": 1}', 'delete');
+
+CALL projeto_crud('{"ID_Projeto": 2}', 'read');

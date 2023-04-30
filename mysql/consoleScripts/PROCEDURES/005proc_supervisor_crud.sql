@@ -1,8 +1,4 @@
--- 
--- CREATE PROCEDURE supervisor_crud(
--- 
-
-CREATE PROCEDURE supervisor_crud(
+CREATE PROCEDURE 005proc_supervisor_crud(
   IN json_str TEXT,
   IN op VARCHAR(10)
 )
@@ -24,7 +20,10 @@ BEGIN
 END;
 
 -- Veja se foi criada 
-SHOW CREATE PROCEDURE Supervisor_crud;
+SHOW CREATE PROCEDURE 005proc_supervisor_crud;
+
+
+
 
 -- Chamando procedure Supervisor_crud com insert,update,read,delete
 

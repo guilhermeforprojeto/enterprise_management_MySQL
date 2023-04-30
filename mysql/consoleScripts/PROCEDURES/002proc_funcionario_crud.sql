@@ -1,4 +1,4 @@
-CREATE PROCEDURE funcionario_crud (
+CREATE PROCEDURE 002proc_funcionario_crud (
   IN json_str TEXT,
   IN op VARCHAR(10)
 )

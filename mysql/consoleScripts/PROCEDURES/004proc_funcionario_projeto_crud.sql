@@ -1,5 +1,5 @@
 
-CREATE PROCEDURE funcionario_projeto_crud (
+CREATE PROCEDURE 004proc_funcionario_projeto_crud (
   IN json_str TEXT,
   IN op VARCHAR(10)
 )
@@ -26,4 +26,7 @@ BEGIN
     SELECT * FROM Funcionario_Projeto WHERE ID_Funcionario = JSON_EXTRACT(json_str, '$.ID_Funcionario') AND ID_Projeto = JSON_EXTRACT(json_str, '$.ID_Projeto');
   END IF;
 END;
-SHOW CREATE PROCEDURE funcionario_projeto_crud;
+
+
+
+SHOW CREATE PROCEDURE 004proc_funcionario_projeto_crud;
