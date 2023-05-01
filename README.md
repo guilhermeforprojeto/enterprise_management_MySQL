@@ -12,8 +12,8 @@ Requisitos.
 - É necessário o envio da modelagem do esquema do banco de dados;
 - É necessário o desenvolvimento de procedures que realizem o CRUD a partir de uma
   estrutura JSON;
-- Toda os artefatos (código, arquivos de configuração, desenho da arquitetura...)
-  desenvolvidos precisam estar disponíveis em um repositório de versionamento de
+- Todos os artefatos (código, arquivos de configuração, desenho da arquitetura...)
+  desenvolvidos precisam estár disponíveis em um repositório de versionamento de
   código acessível pelo time de avaliadores;
 - Desejáveis
 - - Implementação em contêineres Docker (versão 19.03.6 ou superior);
@@ -25,11 +25,11 @@ Requisitos.
 - - Atendimentos dos desejáveis;
 - - Clareza e coerência do código;
 - - Desempenho da solução;
-- - Criatividade
-    Observações
-- Os requisitos são requisitos funcionais e não funcionais da solução, mas a criatividade
-  pode ser exercitada e é encorajada. A inclusão de outras funcionalidades é
-  encorajada.
+- - Criatividade;
+- - Observações:
+- - - Os requisitos são requisitos funcionais e não funcionais da solução, mas a criatividade
+      pode ser exercitada e é encorajada. A inclusão de outras funcionalidades é
+      encorajada.
 
 </details>
 
@@ -92,7 +92,7 @@ Navegue até a pasta /docker onde comtém o arquivo `docker-compose.yml` com as 
 
   O comando docker-compose up é geralmente usado no diretório onde o arquivo docker-compose.yml está localizado. Ele lê o arquivo docker-compose.yml e cria ou inicia os contêineres especificados nele. A opção -d é usada para iniciar os contêineres em segundo plano. A opção --build é usada para garantir que as imagens dos contêineres sejam reconstruídas sempre que houver alterações nos arquivos Dockerfile.
 
-  Em resumo, o comando docker-compose up -d --build inicia e constrói os contêineres do aplicativo especificados no arquivo docker-compose.yml em segundo plano e garante que as imagens dos contêineres sejam sempre reconstruídas a partir dos arquivos Dockerfile.
+  Em resumo, o comando docker-compose up -d --build inicia e constrói os contêineres do aplicativo especificado no arquivo docker-compose.yml em segundo plano e garante que as imagens dos contêineres sejam sempre reconstruídas a partir dos arquivos Dockerfile.
 
 </details>
 
@@ -121,13 +121,13 @@ Navegue até a pasta /docker onde comtém o arquivo `docker-compose.yml` com as 
 
   Criar Triggers
 
-  Estão presentes nas pasta
+  Estão presentes na pasta
 
           /mysql/consoleScripts/TRIGGERS
 
   Criar Procedures
 
-  Estão presentes nas pasta
+  Estão presentes na pasta
 
           /mysql/consoleScripts/PROCEDURES
 
@@ -138,7 +138,7 @@ Navegue até a pasta /docker onde comtém o arquivo `docker-compose.yml` com as 
 
 #### Teste CRUD no Sistema de Gerenciamento Empresarial em MySQL:
 
-- - ##### Certifique-se de criar o Banco, tabelas, triggers e as procedures apresentadas no topico `> Modelagem, Diagrama e Instruções SQL para o banco de dados Empresa/Instruções SQL` para o sucesso deste teste.
+- - ##### Certifique-se de criar o Banco, tabelas, triggers e as procedures apresentadas no tópico `> Modelagem, Diagrama e Instruções SQL para o banco de dados Empresa/Instruções SQL` para o sucesso deste teste.
 
 <details><summary>Procedures que realizem o CRUD a partir de uma estrutura JSON</summary>
 
@@ -146,20 +146,20 @@ Navegue até a pasta /docker onde comtém o arquivo `docker-compose.yml` com as 
 
 #### Criando o CRUD (Create, Read, Update e Delete)
 
-Aqui esta um exemplo simples, para fazer o crud em formato json em todas tabelas, pdoe conferir as Procedures presentes em `/mysql/consoleScripts/PROCEDURES `.
+Aqui está um exemplo simples, para fazer o crud em formato json em todas as tabelas, pdoe conferir as Procedures presentes em `/mysql/consoleScripts/PROCEDURES `.
 Nesse exemplo vamos usar a tabela Departamento por não depender de outra tabela para ser criada. Este exemplo foi feito após as instruções passadas.
 
-- Conectado ao Banco empresa, siga as intruções SQL para fazer o CRUD em fromato JSON
-- Confirme se a Procedure que vamos testar está criada executando o comando a baixo:
-- - `SHOW CREATE PROCEDURE departamento_crud;`
+- Conectado ao Banco empresa, siga as instruções SQL para fazer o CRUD em formato JSON
+- Confirme se a Procedure que vamos testár está criada executando o comando a baixo:
+- - `SHOW CREATE PROCEDURE 001proc_departamento_crud;`
 
   - - Conjunto de resultados esperado:
 
           |Procedure        |sql_mode                                                                                                             |Create     Procedure                                                                                                                                                                                                                                               |character_set_client|collation_connection|Database Collation|
             +-----------------+---------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------------+------------------+
-          |departamento_crud|ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION|CREATE DEFINER=`root`@`%` PROCEDURE `departamento_crud`(¶  IN json_str TEXT,¶  IN op VARCHAR(10)¶)¶BEGIN¶  IF op = 'insert' THEN¶    INSERT INTO Departamento(Nome_Departamento) VALUES(JSON_EXTRACT(json_str, '$.Nome_Departamento'));¶  ELSEIF op = 'update' |utf8mb4             |utf8mb4_0900_ai_ci  |utf8mb4_0900_ai_ci|
+          |001proc_departamento_crud|ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION|CREATE DEFINER=`root`@`%` PROCEDURE `departamento_crud`(¶  IN json_str TEXT,¶  IN op VARCHAR(10)¶)¶BEGIN¶  IF op = 'insert' THEN¶    INSERT INTO Departamento(Nome_Departamento) VALUES(JSON_EXTRACT(json_str, '$.Nome_Departamento'));¶  ELSEIF op = 'update' |utf8mb4             |utf8mb4_0900_ai_ci  |utf8mb4_0900_ai_ci|
 
-- Confirme se a tabela esta limpa:
+- Confirme se a tabela está limpa:
 
   - `SELECT * from Departamento;`
 
@@ -172,7 +172,7 @@ Nesse exemplo vamos usar a tabela Departamento por não depender de outra tabela
 
 CREATE
 
-`CALL departamento_crud('{"Nome_Departamento": "DBA"}', 'insert');`
+`CALL 001proc_departamento_crud('{"Nome_Departamento": "DBA"}', 'insert');`
 
 Verifique se foi criado executando:
 
@@ -191,7 +191,7 @@ Conjunto de resultados esperado:
 
     Conjunto de resultados esperado:
 
-    `CALL departamento_crud('{"ID_Departamento": 1}', 'read');`
+    `CALL 001proc_departamento_crud('{"ID_Departamento": 1}', 'read');`
 
     Conjunto de resultados esperado:
 
@@ -204,7 +204,7 @@ Conjunto de resultados esperado:
 <details><summary>U</summary>
       READ
 
-    `CALL departamento_crud('{"ID_Departamento": 1, "Nome_Departamento": "BACKEND"}', 'update');`
+    `CALL 001proc_departamento_crud('{"ID_Departamento": 1, "Nome_Departamento": "BACKEND"}', 'update');`
 
     Conjunto de resultados esperado:
 
@@ -228,7 +228,7 @@ Conjunto de resultados esperado:
  <summary>D</summary>
       DELETE
 
-    `CALL departamento_crud('{"ID_Departamento": 1}', 'delete');`
+    `CALL 001proc_departamento_crud('{"ID_Departamento": 1}', 'delete');`
 
     Verifique se foi se foi deletado executando:
 
