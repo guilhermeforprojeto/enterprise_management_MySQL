@@ -1,18 +1,18 @@
-# Desenvolver um sistema de gerenciamento empresarial.
+# Sistema de Gerenciamento Empresarial
 
-## Os 2 desafios estão presentes em 2 branches:
-
----
-
-### <a href="https://github.com/guilhermeforprojeto/enterprise_management_MySQL/tree/Desafio_1">Desafio 1</a> Desenvolver um sistema de gerenciamento empresarial em MySQL.
-Concluído, mas presisa de melhoras, na documentação, e triggers.
+## Este é um projeto que consiste no desenvolvimento de um sistema de gerenciamento empresarial. Existem dois desafios envolvidos neste projeto, cada um em uma branch separada:
 
 ---
 
-### <a href="https://github.com/guilhermeforprojeto/enterprise_management_MySQL/tree/Desafio_2">Desafio 2</a> Desenvolvimento de um sistema de gerenciamento empresarial com API Rest, em Python e Django 
+### <a href="https://github.com/guilhermeforprojeto/enterprise_management_MySQL/tree/Desafio_1">Desafio 1: MySQL</a> A branch "Desafio 1" contém o desenvolvimento de um sistema de gerenciamento empresarial em MySQL. O desafio foi concluído, mas ainda existem melhorias que podem ser feitas na documentação e nas triggers.
+
+---
+
+### <a href="https://github.com/guilhermeforprojeto/enterprise_management_MySQL/tree/Desafio_2">Desafio 2: Python e Django</a> A branch "Desafio 2" contém o desenvolvimento de um sistema de gerenciamento empresarial com uma API Rest em Python e Django. Este desafio ainda está em andamento.
+
 Em andamento.... 
 
 ---
 
-### O que esta por vir, um frontend com ReactTS e Tailwind, com login e de acordo login poder fazer alterações na base.  
-
+### Próximos passos
+O próximo passo neste projeto é o desenvolvimento de um frontend com ReactTS e Tailwind. Este frontend incluirá uma funcionalidade de login, permitindo que os usuários façam alterações na base de acordo com o nível de acesso concedido.
