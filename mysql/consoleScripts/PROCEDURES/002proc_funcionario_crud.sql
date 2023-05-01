@@ -48,44 +48,45 @@ BEGIN
   END IF;
 END;
 
-SHOW CREATE PROCEDURE funcionario_crud
+SHOW CREATE PROCEDURE 002proc_funcionario_crud
 
-drop PROCEDURE funcionario_crud
 
 SELECT * from Funcionario;
 
-CALL funcionario_crud('{
+SELECT * from Departamento;
+
+CALL 002proc_funcionario_crud('{
   "ID_Funcionario": 1,
-  "Nome_Funcionario": "João Silva",
+  "Nome_Funcionario": "Guilherme Santana",
   "CPF_Funcionario": "12345678900",
   "RG_Funcionario": "987654321",
   "Sexo_Funcionario": "Masculino",
-  "Data_Nascimento_Funcionario": "1990-01-01",
+  "Data_Nascimento_Funcionario": "1995-05-09",
   "Possui_Habilitacao_Funcionario": true,
-  "Salario_Funcionario": 2000.00,
-  "Carga_Horaria_Semanal_Funcionario": 40,
-  "ID_Departamento": 1
+  "Salario_Funcionario": 3050.00,
+  "Carga_Horaria_Semanal_Funcionario": 44,
+  "ID_Departamento": 2
 }', 'insert');
 
 
-CALL funcionario_crud('{
+CALL 002proc_funcionario_crud('{
   "ID_Funcionario": 1,
   "Nome_Funcionario": "Guilherme Santana",
   "CPF_Funcionario": "32100078900",
   "RG_Funcionario": "987654321",
   "Sexo_Funcionario": "Masculino",
-  "Data_Nascimento_Funcionario": "1990-01-01",
+  "Data_Nascimento_Funcionario": "1995-05-09",
   "Possui_Habilitacao_Funcionario": true,
   "Salario_Funcionario": 5500.00,
   "Carga_Horaria_Semanal_Funcionario": 44,
-  "ID_Departamento": 1
+  "ID_Departamento": 2
 }', 'update');
 
-CALL funcionario_crud('{
+CALL 002proc_funcionario_crud('{
   "ID_Funcionario": 1
 }', 'select');
 
 
-CALL funcionario_crud('{
+CALL 002proc_funcionario_crud('{
   "ID_Funcionario": 1
 }', 'delete');

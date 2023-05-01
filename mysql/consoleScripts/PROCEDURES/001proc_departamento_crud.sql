@@ -15,11 +15,15 @@ BEGIN
 END;
 
 
-SHOW CREATE PROCEDURE departamento_crud;
+SELECT * from Departamento;
 
-CALL 001proc_departamento_crud('{"Nome_Departamento": "PROCEDURE insert 1"}', 'insert');
-CALL 001proc_departamento_crud('{"ID_Departamento": 1, "Nome_Departamento": "PROCEDURE departamento_crud"}', 'update');
+SHOW CREATE PROCEDURE 001proc_departamento_crud;
+
+
+CALL 001proc_departamento_crud('{"Nome_Departamento": "DBA"}', 'insert');
+SELECT * from Departamento;
+CALL 001proc_departamento_crud('{"ID_Departamento": 1, "Nome_Departamento": "BACKEND"}', 'update');
+SELECT * from Departamento;
 CALL 001proc_departamento_crud('{"ID_Departamento": 1}', 'read');
 CALL 001proc_departamento_crud('{"ID_Departamento": 1}', 'delete');
-
-SELECT * FROM Departamento
+SELECT * from Departamento;

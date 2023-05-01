@@ -23,29 +23,26 @@ END;
 SHOW CREATE PROCEDURE 005proc_supervisor_crud;
 
 
+-- Verifique os ids que vai usar para insert
+SELECT * from Supervisor;
+SELECT * from Funcionario;
+SELECT * from Funcionario_Projeto;
+--
+-- Atenção, verifique a carga horaria do funcionário supervisor(SELECT * from Funcionario_Projeto;) pois a
+-- trigger 001carga_horaria_supervisao não permite gravar uma carga horaria maior.
+CALL 005proc_supervisor_crud('{"ID_Funcionario": 1, "ID_Projeto": 3, "Carga_Horaria_Supervisao": 25}', 'insert');
 
 
--- Chamando procedure Supervisor_crud com insert,update,read,delete
+SELECT * from Supervisor;
 
-CALL supervisor_crud('"ID_Funcionario": 1, "ID_Projeto": 1, "Carga_Horaria_Supervisao": 40}', 'insert');
+CALL 005proc_supervisor_crud('{"ID_Supervisor": 1, "ID_Funcionario": 1, "ID_Projeto": 3, "Carga_Horaria_Supervisao": 40}', 'update');
 
--- PRINT 
-ID_Supervisor|ID_Funcionario|ID_Projeto|Carga_Horaria_Supervisao|
--------------+--------------+----------+------------------------+
-            3|             1|         1|                      40|
+SELECT * from Supervisor;
 
-CALL supervisor_crud('{"ID_Supervisor": 3, "ID_Funcionario": 2, "ID_Projeto": 2, "Carga_Horaria_Supervisao": 16}', 'update');
--- PRINT 
-ID_Supervisor|ID_Funcionario|ID_Projeto|Carga_Horaria_Supervisao|
--------------+--------------+----------+------------------------+
-            3|             2|         2|                      16|
-            
-CALL supervisor_crud('{"ID_Supervisor": 3}', 'read');
+CALL 005proc_supervisor_crud('{"ID_Supervisor": 1}', 'read');
 
-CALL supervisor_crud('{"ID_Supervisor": 3}', 'delete');
+SELECT * from Supervisor;
 
--- PRINT 
+CALL 005proc_supervisor_crud('{"ID_Supervisor": 1}', 'delete');
 
-ID_Supervisor|ID_Funcionario|ID_Projeto|Carga_Horaria_Supervisao|
--------------+--------------+----------+------------------------+
-
+SELECT * from Supervisor;

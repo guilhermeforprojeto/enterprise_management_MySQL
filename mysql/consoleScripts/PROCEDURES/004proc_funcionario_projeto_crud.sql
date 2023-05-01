@@ -1,4 +1,3 @@
-
 CREATE PROCEDURE 004proc_funcionario_projeto_crud (
   IN json_str TEXT,
   IN op VARCHAR(10)
@@ -30,3 +29,16 @@ END;
 
 
 SHOW CREATE PROCEDURE 004proc_funcionario_projeto_crud;
+
+
+
+CALL 004proc_funcionario_projeto_crud('{"ID_Funcionario": 1, "ID_Projeto": 3, "Carga_Horaria": 40}', 'insert');
+SELECT * from Funcionario_Projeto;
+
+CALL 004proc_funcionario_projeto_crud('{"ID_Funcionario": 1, "ID_Projeto": 3, "Carga_Horaria": 20}', 'update');
+SELECT * from Funcionario_Projeto;
+
+CALL 004proc_funcionario_projeto_crud('{"ID_Funcionario": 1, "ID_Projeto": 1}', 'select');
+
+CALL 004proc_funcionario_projeto_crud('{"ID_Funcionario": 1, "ID_Projeto": 3}', 'delete');
+SELECT * from Funcionario_Projeto;
