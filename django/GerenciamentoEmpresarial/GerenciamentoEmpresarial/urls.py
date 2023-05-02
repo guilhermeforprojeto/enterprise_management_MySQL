@@ -2,16 +2,14 @@ from django.contrib import admin
 from django.urls import path, include
 
 from rest_framework import routers
+from empresa.api.viewsets import DepartamentoViewSet, FuncionarioViewSet
 
-from empresa.api import viewsets as departamentoviewsets
+router = routers.DefaultRouter()
 
-route = routers.DefaultRouter()
-
-route.register(r'departamento',
-               departamentoviewsets.DepartamentoViewSet, basename='departamento')
-
+router.register(r'departamento', DepartamentoViewSet, basename='departamento')
+router.register(r'funcionario', FuncionarioViewSet, basename='funcionario')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',  include(route.urls)),
+    path('', include(router.urls)),
 ]
