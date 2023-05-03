@@ -11,3 +11,8 @@ class FuncionarioSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Funcionario
         fields = '__all__'
+        
+class ProjetoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Projeto
+        fields = '__all__'
