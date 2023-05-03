@@ -24,3 +24,18 @@ class Funcionario(models.Model):
 
     class Meta:
         db_table = 'Funcionario'
+
+class Projeto(models.Model):
+    nome_projeto = models.CharField(max_length=40)
+    quantidade_horas_necessarias = models.IntegerField()
+    prazo_estimado = models.IntegerField()
+    quantidade_horas_realizadas = models.IntegerField()
+    data_ultimo_calculo_horas = models.DateField()
+    departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
+    carga_horaria_supervisao = models.IntegerField()
+    funcionario_supervisor = models.ForeignKey(Funcionario, on_delete=models.CASCADE)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(fields=['departamento', 'nome_projeto'], name='UQ_Nome_Projeto_Departamento'),
+        ]
