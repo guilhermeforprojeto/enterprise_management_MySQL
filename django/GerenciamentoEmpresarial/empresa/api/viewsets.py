@@ -70,3 +70,8 @@ class FuncionarioViewSet(viewsets.ViewSet):
         funcionario = models.Funcionario.objects.get(pk=pk) # alteração aqui
         funcionario.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class ProjetoViewSet(viewsets.ModelViewSet):
+    queryset = models.Projeto.objects.all()
+    serializer_class = serializers.ProjetoSerializer
