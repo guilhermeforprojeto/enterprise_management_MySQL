@@ -6,11 +6,11 @@ BEGIN
   IF op = 'insert' THEN
     INSERT INTO Departamento(Nome_Departamento) VALUES(JSON_EXTRACT(json_str, '$.Nome_Departamento'));
   ELSEIF op = 'update' THEN
-    UPDATE Departamento SET Nome_Departamento = JSON_EXTRACT(json_str, '$.Nome_Departamento') WHERE ID_Departamento = JSON_EXTRACT(json_str, '$.ID_Departamento');
+    UPDATE Departamento SET Nome_Departamento = JSON_EXTRACT(json_str, '$.Nome_Departamento') WHERE ID_Departamento = CAST(JSON_EXTRACT(json_str, '$.ID_Departamento') AS INT);
   ELSEIF op = 'delete' THEN
-    DELETE FROM Departamento WHERE ID_Departamento = JSON_EXTRACT(json_str, '$.ID_Departamento');
+    DELETE FROM Departamento WHERE ID_Departamento = CAST(JSON_EXTRACT(json_str, '$.ID_Departamento') AS INT);
   ELSEIF op = 'read' THEN
-    SELECT * FROM Departamento WHERE ID_Departamento = JSON_EXTRACT(json_str, '$.ID_Departamento');
+    SELECT * FROM Departamento WHERE ID_Departamento = CAST(JSON_EXTRACT(json_str, '$.ID_Departamento') AS INT);
   END IF;
 END;
 
