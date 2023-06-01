@@ -96,7 +96,9 @@ Navegue até a pasta /docker onde comtém o arquivo `docker-compose.yml` com as 
 
   Em resumo, o comando docker-compose up -d --build inicia e constrói os contêineres do aplicativo especificado no arquivo docker-compose.yml em segundo plano e garante que as imagens dos contêineres sejam sempre reconstruídas a partir dos arquivos Dockerfile.
 
-- <details><summary> Iniciar servidor Django</summary>
+</details>
+
+<details><summary> Iniciar servidor Django</summary>
 
 - navegue até a pasta `enterprise_management_MySQL/django/GerenciamentoEmpresarial` onde esta o arquivo `manage.py` e execute o seguinte comando:
 
