@@ -1,22 +1,28 @@
-<img style="width: 100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" /><img style="width: 100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg" />
-<img  style="width: 100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" /> <img style="width: 100" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
-
 # Sistema de Gerenciamento Empresarial
 
-## Este é um projeto que consiste no desenvolvimento de um sistema de gerenciamento empresarial. Existem dois desafios envolvidos neste projeto, cada um em uma branch separada:
+Bem-vindo ao repositório do Sistema de Gerenciamento Empresarial! Este projeto visa oferecer uma solução abrangente para o gerenciamento eficiente de empresas. Aqui estão algumas informações cruciais para facilitar o entendimento e uso deste projeto.
 
----
+## Tecnologias Utilizadas
 
-### <a href="https://github.com/guilhermeforprojeto/enterprise_management_MySQL/tree/Desafio_1">Desafio 1: MySQL</a> A branch "Desafio 1" contém o desenvolvimento de um sistema de gerenciamento empresarial em MySQL. O desafio foi concluído, mas ainda existem melhorias que podem ser feitas na documentação e nas triggers.
+Este sistema é desenvolvido utilizando as seguintes tecnologias:
+<div style="display: flex; justify-content: center;">
+<img style="max-width: 100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" /><img style="max-width: 100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg" /><img style="max-width: 100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" /><img style="max-width: 100px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" />
 
----
 
-### <a href="https://github.com/guilhermeforprojeto/enterprise_management_MySQL/tree/Desafio_2">Desafio 2: Python e Django</a> A branch "Desafio 2" contém o desenvolvimento de um sistema de gerenciamento empresarial com uma API Rest em Python e Django. Este desafio ainda está em andamento.
+</div>
 
-Em andamento....
+## Desafios e Branches
 
----
+### [Desafio 1: MySQL](https://github.com/guilhermeforprojeto/enterprise_management_MySQL/tree/Desafio_1)
 
-### Próximos passos
+A branch "Desafio 1" apresenta o desenvolvimento do sistema de gerenciamento empresarial utilizando MySQL. Embora o desafio tenha sido concluído, estamos abertos a melhorias na documentação e nas triggers. Sua colaboração é bem-vinda!
 
-O próximo passo neste projeto é o desenvolvimento de um frontend com ReactTS e Tailwind. Este frontend incluirá uma funcionalidade de login, permitindo que os usuários façam alterações na base de acordo com o nível de acesso concedido.
+### [Desafio 2: Python e Django](https://github.com/guilhermeforprojeto/enterprise_management_MySQL/tree/Desafio_2)
+
+A branch "Desafio 2" está em andamento e abrange o desenvolvimento do sistema utilizando Python e Django para criar uma API Rest. Contribuições e feedback são apreciados enquanto continuamos aprimorando esta parte do projeto.
+
+## Próximos Passos
+
+O desenvolvimento futuro incluirá a criação de um frontend utilizando ReactTS e Tailwind. Este frontend proporcionará uma experiência interativa, incluindo recursos de login e permissões para modificar a base de dados de acordo com os níveis de acesso concedidos.
+
+Agradecemos sua participação neste projeto! Se tiver alguma dúvida, sugestão ou desejar colaborar, sinta-se à vontade para abrir issues ou pull requests. Juntos, podemos tornar este projeto ainda melhor!
